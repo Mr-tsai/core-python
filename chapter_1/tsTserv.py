@@ -1,5 +1,6 @@
 from socket import *
-from time import ctime
+#from time import ctime
+from datetime import *
 
 HOST = ''
 PORT = 21567
@@ -21,6 +22,7 @@ while True:
             break
         tcpCliSock.send('[%s] %s' %(
             bytes(ctime(), 'utf-8'), data))
+        print(datetime.now())
 
     tcpCliSock.close()
 tcpSerSock.close()
